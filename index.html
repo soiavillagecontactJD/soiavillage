@@ -977,12 +977,11 @@ footer :focus-visible{outline-color:var(--focus-ring)}
 
       btn.disabled = true; btn.textContent = 'Envoi…';
       try {
-        var res = await fetch('/api/inscription', {
+        await fetch('https://script.google.com/macros/s/AKfycbz4wKZqyY225nliFJE_-yzlo9bx3fWzrvBH22o174HDNxAWQb0QL-LhGfD3Y7l3Yg1ABA/exec', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
+          mode: 'no-cors',
+          body: new URLSearchParams(data)
         });
-        if (!res.ok) throw new Error('HTTP ' + res.status);
         form.reset();
         show('ok', 'Merci ' + data.prenom + ' ! On a bien reçu ta demande, on te contacte très vite.');
         btn.textContent = 'Envoyé';
