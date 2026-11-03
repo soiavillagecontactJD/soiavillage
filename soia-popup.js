@@ -1,5 +1,6 @@
 /* POP-UP « TARIF EARLY MAMA » — SOÏA VILLAGE
-   Chargé par : <script src="/soia-popup.js" defer></script> avant </body>
+   Chargé par : <script src="/soia-popup.js?v=3" defer></script> avant </body>
+   S'affiche à chaque nouvelle visite (une fois par visite, pas à chaque page)
 */
 (function () {
   function demarrer() {
@@ -29,6 +30,12 @@
         if (!parent || /^(SCRIPT|STYLE|TEXTAREA|OPTION)$/.test(parent.tagName)) continue;
         if (/490\s*(€|euros?)/i.test(n.nodeValue)) cibles.push(n);
       }
+      // Paiement en 6 fois : 6 × 81,67 € devient 6 × 41,67 €
+      var w2 = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT), m2;
+      while ((m2 = w2.nextNode())) {
+        if (pop && pop.contains(m2)) continue;
+        if (/81[,.]67/.test(m2.nodeValue)) m2.nodeValue = m2.nodeValue.replace(/81([,.])67/g, '41$167');
+      }
       cibles.forEach(function (t) {
         var morceaux = t.nodeValue.split(/(490\s*(?:€|euros?))/i);
         var frag = document.createDocumentFragment();
@@ -47,13 +54,13 @@
       });
     })();
 
-    try { if (localStorage.getItem(STORAGE_KEY)) return; } catch (e) {}
+    try { if (sessionStorage.getItem(STORAGE_KEY)) return; } catch (e) {}
 
     var popup = document.getElementById('soia-popup');
     if (!popup) return;
 
     function retenir() {
-      try { localStorage.setItem(STORAGE_KEY, '1'); } catch (e) {}
+      try { sessionStorage.setItem(STORAGE_KEY, '1'); } catch (e) {}
     }
     function fermer() {
       popup.hidden = true;
