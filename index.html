@@ -101,7 +101,8 @@ nav{display:flex;align-items:center;justify-content:space-between;height:76px}
 .tarif{border:1px solid var(--ligne);border-radius:14px;padding:34px 28px;display:flex;flex-direction:column;background:var(--blanc)}
 .tarif .nom{font-family:"Lora",serif;font-style:italic;font-size:1.6rem;color:var(--prune)}
 .tarif .quand{font-size:.92rem;color:var(--texte-doux);margin-bottom:20px}
-.tarif .prix{font-family:"Lora",serif;font-size:2.2rem;color:var(--prune);line-height:1.1}
+.tarif .prix{font-family:"Lora",serif;font-size:2.2rem;color:var(--prune);line-height:1.1;display:block;text-align:center}
+.tarif .mois{display:block;text-align:center;font-size:.9rem;color:var(--texte-doux);margin-top:6px}
 .tarif .detail{font-size:.9rem;color:var(--texte-doux);margin:8px 0 26px;flex:1}
 .tarif.vedette{background:var(--prune);border-color:var(--prune)}
 .tarif.vedette .nom,.tarif.vedette .prix{color:var(--creme)}
@@ -185,7 +186,7 @@ header .btn-plein{background:var(--logo-rose);color:var(--logo-fonce)}
 .tarif{background:var(--creme);border:0}
 .tarif.vedette{background:var(--logo-rose)}
 .tarif.vedette .nom,.tarif.vedette .prix{color:var(--logo-fonce)}
-.tarif.vedette .quand,.tarif.vedette .detail{color:var(--prune)}
+.tarif.vedette .quand,.tarif.vedette .mois{color:var(--prune)}
 .tarif.vedette .btn-clair{background:var(--logo-fonce);color:var(--creme)}
 .inclus{margin-top:32px;color:#F7EAF0}
 .inclus strong{color:var(--creme)}
@@ -707,18 +708,21 @@ footer :focus-visible{outline-color:var(--focus-ring)}
             <span class="nom">Bump</span>
             <span class="quand">La grossesse, dès le 3<sup>e</sup> mois · 6&nbsp;mois</span>
             <span class="prix">490&nbsp;€</span>
+            <span class="mois">soit 81,67&nbsp;€/mois</span>
             <a href="https://buy.stripe.com/3cI3co0oT12K8RxfCG7AI09" class="btn btn-ligne">Choisir Bump</a>
           </article>
           <article class="tarif vedette">
             <span class="nom">Bump puis Bloom <span class="badge-avenir">À venir</span></span>
             <span class="quand">9&nbsp;mois d'accompagnement</span>
             <span class="prix">780&nbsp;€</span>
+            <span class="mois">soit 86,67&nbsp;€/mois</span>
             <span class="indispo">Bientôt disponible</span>
           </article>
           <article class="tarif">
             <span class="nom">Bloom <span class="badge-avenir">À venir</span></span>
             <span class="quand">Le 4<sup>e</sup> trimestre · 3&nbsp;mois</span>
             <span class="prix">390&nbsp;€</span>
+            <span class="mois">soit 130&nbsp;€/mois</span>
             <span class="indispo">Bientôt disponible</span>
           </article>
         </div>
