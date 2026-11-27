@@ -1,19 +1,19 @@
 /* TOAST « TARIF EARLY MAMA » — SOÏA VILLAGE
-   Chargé par : <script src="/soia-popup.js?v=5" defer></script> avant </body>
-   - Remplace « 490 € » par le tarif Early Mama sur la page jusqu'au 27 novembre
+   Chargé par : <script src="/soia-popup.js?v=6" defer></script> avant </body>
+   - Remplace « 490 € » par le tarif Early Mama sur la page jusqu'au 30 novembre
    - Affiche un petit toast en bas à droite (en bas de l'écran sur téléphone),
      après 15 secondes ou quand la visiteuse a lu 40 % de la page
    - « Plus tard » : revient à la prochaine visite ; × ou « C'est pour moi » : ne revient plus
 */
 (function () {
   function demarrer() {
-    var DATE_FIN = new Date('2026-11-28T00:00:00+01:00'); // plus rien à partir du 28 novembre
+    var DATE_FIN = new Date('2026-12-01T00:00:00+01:00'); // plus rien à partir du 1er décembre
     var CLE_DEFINITIF = 'soia-early-mama-ferme';
     var CLE_VISITE = 'soia-early-mama-plus-tard';
     var DELAI_MS = 15000;
     var SEUIL_LECTURE = 0.4;
 
-    // Après le 27 novembre : plus rien ne change, la page garde 490 €
+    // Après le 30 novembre : plus rien ne change, la page garde 490 €
     if (new Date() >= DATE_FIN) return;
 
     var style = document.createElement('style');
@@ -42,7 +42,7 @@
     ].join('');
     document.head.appendChild(style);
 
-    // Jusqu'au 27 novembre : remplace « 490 € » sur la page par le tarif Early Mama
+    // Jusqu'au 30 novembre : remplace « 490 € » sur la page par le tarif Early Mama
     (function afficherTarifEarly() {
       var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
       var cibles = [], n;
@@ -64,7 +64,7 @@
             var span = document.createElement('span');
             span.className = 'soia-prix-early';
             span.innerHTML = '<strong>250 €</strong>' +
-              '<span class="soia-prix-early__note">Tarif Early Mama jusqu\'au 27 novembre, puis 490 €</span>';
+              '<span class="soia-prix-early__note">Tarif Early Mama jusqu\'au 30 novembre, puis 490 €</span>';
             frag.appendChild(span);
           } else if (m) {
             frag.appendChild(document.createTextNode(m));
@@ -94,7 +94,7 @@
         '</div>' +
         '<p class="soia-toast__titre">Premier groupe en décembre</p>' +
         '<p class="soia-toast__texte">Tu attends ton bébé pour mai ou juin 2027 ? Rejoins le premier groupe Soïa : 6 mois avec deux doulas, un live toutes les deux semaines, et des femmes qui accouchent en même temps que toi.</p>' +
-        '<p class="soia-toast__texte"><strong>250 €</strong> au lieu de 490 €, en échange de tes retours en cours de route. <strong>10 places, jusqu’au 27 novembre.</strong></p>' +
+        '<p class="soia-toast__texte"><strong>250 €</strong> au lieu de 490 €, en échange de tes retours en cours de route. <strong>10 places, jusqu’au 30 novembre.</strong></p>' +
         '<div class="soia-toast__actions">' +
           '<a href="#inscription-bump" class="soia-toast__bouton" data-offre>C’est pour moi</a>' +
           '<button type="button" class="soia-toast__plus-tard" data-plus-tard>Plus tard</button>' +
