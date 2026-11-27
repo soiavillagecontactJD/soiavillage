@@ -643,8 +643,7 @@ footer :focus-visible{outline-color:var(--focus-ring)}
             <li>Batch cooking</li><li>Le couple et la famille</li>
             <li>La place du co-parent</li><li>Penser au post-partum</li>
           </ul>
-          <!-- TODO: remplacer par le lien de paiement Stripe une fois créé -->
-          <a href="#TODO-STRIPE-BUMP" class="btn btn-ligne prog-cta">Choisir Bump</a>
+          <a href="https://buy.stripe.com/3cI3co0oT12K8RxfCG7AI09" class="btn btn-ligne prog-cta">Choisir Bump</a>
         </article>
         <article class="prog prog-bloom">
           <span class="prog-etape">Après la naissance</span>
@@ -708,7 +707,7 @@ footer :focus-visible{outline-color:var(--focus-ring)}
             <span class="quand">La grossesse, dès le 3<sup>e</sup> mois · 6&nbsp;mois</span>
             <span class="prix">490&nbsp;€</span>
             <span class="detail">ou 6 × 81,67&nbsp;€</span>
-            <a href="#inscription-bump" class="btn btn-ligne">Choisir Bump</a>
+            <a href="https://buy.stripe.com/3cI3co0oT12K8RxfCG7AI09" class="btn btn-ligne">Choisir Bump</a>
           </article>
           <article class="tarif vedette">
             <span class="nom">Bump puis Bloom <span class="badge-avenir">À venir</span></span>
@@ -735,66 +734,6 @@ footer :focus-visible{outline-color:var(--focus-ring)}
   </section>
 
   <!-- FORMULAIRES D'INSCRIPTION : un par formule, affiché quand on clique sur « Choisir … » -->
-  <section class="soia-form-section" id="inscription-bump">
-  <div class="soia-form-wrap">
-    <h2>Rejoindre Bump</h2>
-    <p class="soia-offre">La grossesse, dès le 3e mois. 6 mois d'accompagnement.</p>
-    <p class="soia-intro">
-      Laisse-nous tes coordonnées. On te contacte personnellement pour faire connaissance,
-      répondre à tes questions et t'expliquer la suite.
-    </p>
-
-    <form class="soia-form" novalidate>
-      <input type="hidden" name="programme" value="Bump">
-
-      <div class="soia-row">
-        <div class="soia-field">
-          <label for="bump-prenom">Prénom</label>
-          <input id="bump-prenom" name="prenom" type="text" autocomplete="given-name" required>
-        </div>
-        <div class="soia-field">
-          <label for="bump-nom">Nom</label>
-          <input id="bump-nom" name="nom" type="text" autocomplete="family-name" required>
-        </div>
-      </div>
-
-      <div class="soia-field">
-        <label for="bump-email">Adresse e-mail</label>
-        <input id="bump-email" name="email" type="email" autocomplete="email" required>
-      </div>
-
-      <div class="soia-field">
-        <label for="bump-telephone">Numéro de téléphone</label>
-        <input id="bump-telephone" name="telephone" type="tel" autocomplete="tel"
-               pattern="[0-9+ .()-]{8,20}" placeholder="06 12 34 56 78" required>
-      </div>
-
-      <div class="soia-field">
-        <label for="bump-dpa">Date prévue d'accouchement</label>
-        <input id="bump-dpa" name="dpa" type="date" required>
-      </div>
-
-      <!-- anti-spam : ne pas supprimer -->
-      <div class="soia-hp" aria-hidden="true">
-        <label for="bump-site">Ne pas remplir</label>
-        <input id="bump-site" name="site" type="text" tabindex="-1" autocomplete="off">
-      </div>
-
-      <label class="soia-consent">
-        <input type="checkbox" name="consentement" required>
-        <span>
-          J'accepte que Soïa Village conserve ces informations pour me recontacter au sujet du programme.
-          Elles ne sont ni vendues ni partagées. <a href="/confidentialite">Politique de confidentialité</a>
-        </span>
-      </label>
-
-      <button type="submit" class="soia-btn">Je veux être recontactée</button>
-      <div class="soia-msg" role="status" aria-live="polite"></div>
-      <a class="soia-retour" href="#tarifs">← Revoir les formules</a>
-    </form>
-  </div>
-</section>
-
   <section class="soia-form-section" id="inscription-bumpbloom">
   <div class="soia-form-wrap">
     <h2>Rejoindre Bump puis Bloom</h2>

@@ -96,7 +96,7 @@
         '<p class="soia-toast__texte">Tu attends ton bébé pour mai ou juin 2027 ? Rejoins le premier groupe Soïa : 6 mois avec deux doulas, un live toutes les deux semaines, et des femmes qui accouchent en même temps que toi.</p>' +
         '<p class="soia-toast__texte"><strong>250 €</strong> au lieu de 490 €, en échange de tes retours en cours de route. <strong>10 places, jusqu’au 30 novembre.</strong></p>' +
         '<div class="soia-toast__actions">' +
-          '<a href="#inscription-bump" class="soia-toast__bouton" data-offre>C’est pour moi</a>' +
+          '<a href="https://buy.stripe.com/3cI3co0oT12K8RxfCG7AI09" class="soia-toast__bouton" data-offre>C’est pour moi</a>' +
           '<button type="button" class="soia-toast__plus-tard" data-plus-tard>Plus tard</button>' +
         '</div>' +
       '</aside>';
@@ -136,7 +136,7 @@
       ecrire('sessionStorage', CLE_VISITE);
       cacher();
     });
-    // Mène directement au formulaire Bump (section #inscription-bump)
+    // Mène directement au paiement Stripe Early Mama
     toast.querySelector('[data-offre]').addEventListener('click', function () {
       ecrire('localStorage', CLE_DEFINITIF);
       cacher();
